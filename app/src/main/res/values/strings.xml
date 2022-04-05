@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Hello Sensor</string>
+    <string name="edit_message">Starta här --></string>
+    <string name="button_acc">Starta Accelerometer</string>
+    <string name="button_comp">Starta Kompass</string>
+    <string name="compass_text">Kompass</string>
+
+    <string name="Acc_value_text">Accelerometer values:</string>
+    <string name="AccX">AccX</string>
+    <string name="AccY">AccY</string>
+    <string name="AccZ">AccZ</string>
+    <string name="LutningX">LutningX</string>
+
+</resources>

@@ -1,8 +1,12 @@
 package com.example.hellosensor;
+import android.graphics.Color;
 import android.hardware.Sensor;
 import android.hardware.SensorManager;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+
 import android.hardware.SensorEvent;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.hardware.SensorEventListener;
@@ -28,8 +32,6 @@ public class Compass extends AppCompatActivity implements SensorEventListener {
     private boolean mLastMagnetometerSet = false;
     int mAzimuth;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +41,7 @@ public class Compass extends AppCompatActivity implements SensorEventListener {
         compassImage.setImageResource(R.drawable.img);
         compassText = findViewById(R.id.tvHeading); //TextView will be displaying the degree
         mSensorManager = (SensorManager) getSystemService(SENSOR_SERVICE); //Lets us access the sensors
+
 
         start();
     }
@@ -108,6 +111,12 @@ public class Compass extends AppCompatActivity implements SensorEventListener {
         compassImage.setRotation(-mAzimuth);
 
         compassText.setText(mAzimuth + "° " );
+
+        if (mAzimuth >= 345 || mAzimuth <= 15 ) {
+            compassText.setTextColor(Color.parseColor("#00FF00"));
+        } else {
+            compassText.setTextColor(Color.parseColor("#000000"));
+        }
     }
 
     //Not using

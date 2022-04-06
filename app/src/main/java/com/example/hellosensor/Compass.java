@@ -116,13 +116,6 @@ public class Compass extends AppCompatActivity implements SensorEventListener {
             compassText.setTextColor(Color.parseColor("#000000"));
         }
     }
-
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        setContentView(R.layout.activity_main);
-    }
-
     //Not using
     @Override
     public void onAccuracyChanged(Sensor sensor, int accuracy) {

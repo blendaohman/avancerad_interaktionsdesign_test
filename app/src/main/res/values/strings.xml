@@ -5,7 +5,7 @@
     <string name="button_comp">Starta Kompass</string>
     <string name="compass_text">Kompass</string>
 
-    <string name="Acc_value_text">Accelerometer values:</string>
+    <string name="Acc_value_text">Accelerometer:</string>
     <string name="AccX">AccX</string>
     <string name="AccY">AccY</string>
     <string name="AccZ">AccZ</string>

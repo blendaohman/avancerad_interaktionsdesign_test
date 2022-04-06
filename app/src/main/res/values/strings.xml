@@ -9,6 +9,11 @@
     <string name="AccX">AccX</string>
     <string name="AccY">AccY</string>
     <string name="AccZ">AccZ</string>
-    <string name="LutningX">LutningX</string>
+    <string name="X">X:</string>
+    <string name="Y">Y:</string>
+    <string name="Z">Z:</string>
+    <string name="Direction">Direction: 0.0</string>
+
+
 
 </resources>

@@ -42,6 +42,7 @@ public class Accelerometer extends AppCompatActivity implements SensorEventListe
 
     }
 
+    //Not using
     @Override
     public void onAccuracyChanged(Sensor sensor, int accuracy) {
 

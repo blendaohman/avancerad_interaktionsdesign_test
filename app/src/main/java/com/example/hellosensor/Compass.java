@@ -3,16 +3,14 @@ import android.graphics.Color;
 import android.hardware.Sensor;
 import android.hardware.SensorManager;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 
 import android.hardware.SensorEvent;
-import android.view.View;
+
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.hardware.SensorEventListener;
 import android.os.Bundle;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
+
 
 
 public class Compass extends AppCompatActivity implements SensorEventListener {
@@ -60,7 +58,6 @@ public class Compass extends AppCompatActivity implements SensorEventListener {
             haveSensor = mSensorManager.registerListener(this, mRotationV, SensorManager.SENSOR_DELAY_UI);
         }
     }
-
 
     public void stop() {
         if(haveSensor && haveSensor2){
@@ -112,11 +109,18 @@ public class Compass extends AppCompatActivity implements SensorEventListener {
 
         compassText.setText(mAzimuth + "° " );
 
+        //Changing the color to green when facing north
         if (mAzimuth >= 345 || mAzimuth <= 15 ) {
             compassText.setTextColor(Color.parseColor("#00FF00"));
         } else {
             compassText.setTextColor(Color.parseColor("#000000"));
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        setContentView(R.layout.activity_main);
     }
 
     //Not using
